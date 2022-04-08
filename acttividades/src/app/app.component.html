@@ -1,0 +1,23 @@
+<h1>
+  Hola mundo
+</h1>
+<h2>
+  {{'-'.repeat(10)}}
+</h2>
+<h3>
+  hola , soy {{persona.name}}
+</h3>
+<progress max= "100" [value]="persona.age" ></progress>
+<img width="100" [src]="persona.image">
+
+<Button  [disabled]="btndisabled" (click)="edadmas()" >Aumentar</Button>
+<Button  (click)="save()" >Enviar</Button>
+<h1>
+  <h3>
+    Caja de : {{persona.name}}
+  </h3>
+  <input type= "text" maxlength="10" minlength="5"  required #validar="ngModel" [(ngModel)]="persona.name"/>
+  <h2>
+    Validar :{{validar.valid}}
+  </h2>
+</h1>
